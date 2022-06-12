@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+# ##############################################################################
+# SCRIPT:       wrap
+# AUTHOR:       jam82
+# VERSION:      0.1.0
+# DATE:         12.06.2022
+# LICENSE:      MIT
+# DESCRIPTION:  wrapper script for Makefile targets to include logging
+# ##############################################################################
+
+source lib/log
+
+run() {
+    local cmd=''
+    log_notice "MAKE $CALLER started"
+    while IFS= read -r line; do
+        log_debug "${line}"
+        cmd+="${line}; "
+    done <<< "${@:2}"
+    bash -c "${cmd}"
+    log_notice "MAKE $CALLER finished"
+}
+
+run "$@"
