@@ -1,0 +1,8 @@
+---
+# file: ansible/playbooks/kickstart.yml
+
+- hosts: all
+  gather_facts: false
+  become: false
+  roles:
+    - kickstart

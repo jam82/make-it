@@ -1,0 +1,14 @@
+---
+# file: ansible/requirements.yml
+
+roles:
+  - src: https://github.com/jam82/ansible-role-kickstart.git
+    name: kickstart
+    version: main
+  - src: https://github.com/jam82/ansible-role-virtinstall.git
+    name: virtinstall
+    version: main
+
+collections:
+  - name: git+https://github.com/jam82/ansible-collection-general.git
+    version: main

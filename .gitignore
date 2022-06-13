@@ -1,3 +1,5 @@
 # file: .gitignore
 .env
+*.cfg
+*.txt
 dist

@@ -11,6 +11,8 @@
 
 source lib/log
 
+# TODO: autocompletion, therefore currently disabled
+
 run() {
     local cmd=''
     log_notice "MAKE $CALLER started"

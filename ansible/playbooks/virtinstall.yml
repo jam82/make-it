@@ -1,0 +1,8 @@
+---
+# file: ansible/playbooks/virtinstall.yml
+
+- hosts: vms
+  gather_facts: false
+  become: false
+  roles:
+    - virtinstall
